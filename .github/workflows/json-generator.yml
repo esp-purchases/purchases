@@ -1,0 +1,19 @@
+name: "JSON Generator"
+
+on:
+  schedule:
+    - cron:  "0 */6 * * *"
+
+jobs:
+  purchases:
+    runs-on: ubuntu-latest
+    name: "Generate & Update"
+    steps:
+      - uses: pkgstore/github-action-gov-purchases@main
+        with:
+          repo: "https://github.com/${{ github.repository }}.git"
+          user: "${{ secrets.GIT_BOT_NAME }}"
+          email: "${{ secrets.GIT_BOT_EMAIL }}"
+          token: "${{ secrets.GIT_BOT_TOKEN }}"
+          org_itn: "${{ secrets.ORG_ITN }}"
+          page_count: "0"

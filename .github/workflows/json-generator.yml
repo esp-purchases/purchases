@@ -2,8 +2,8 @@ name: "JSON Generator"
 
 on:
   schedule:
-    - cron:  "0 */6 * * *"
-  workflow_dispatch:
+    - cron:  "0 0 * * *"
+  # workflow_dispatch:
 
 jobs:
   purchases:
@@ -17,4 +17,4 @@ jobs:
           email: "${{ secrets.GIT_BOT_EMAIL }}"
           token: "${{ secrets.GIT_BOT_TOKEN }}"
           org_itn: "${{ secrets.ORG_ITN }}"
-          page_count: "0"
+          page_count: "5"

@@ -8,7 +8,7 @@ on:
 jobs:
   purchases:
     runs-on: ubuntu-latest
-    name: "Generate & Update"
+    name: "Generate / Update"
     steps:
       - uses: pkgstore/github-action-gov-purchases@main
         with:

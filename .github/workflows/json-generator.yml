@@ -16,4 +16,4 @@ jobs:
           email: "${{ secrets.GIT_BOT_EMAIL }}"
           token: "${{ secrets.GIT_BOT_TOKEN }}"
           org_itn: "${{ secrets.ORG_ITN }}"
-          page_count: "5"
+          page_count: "3"

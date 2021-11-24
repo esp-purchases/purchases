@@ -4,6 +4,8 @@ on:
   schedule:
     - cron:  "0 22 * * *"
 
+  workflow_dispatch:
+
 jobs:
   purchases:
     runs-on: ubuntu-latest
